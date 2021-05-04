@@ -3,12 +3,11 @@ package com.caiquecsx.order.gateway.h2.domain
 import javax.persistence.*
 
 @Entity
+@Table(name = "order_table")
 data class Order(
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        var id: Int,
-        @Column
-        var items: String,
-        @Column
-        var totalPrice: String
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        var id: Int = 0,
+        var items: String = "",
+        var totalPrice: String = ""
 )
