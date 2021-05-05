@@ -1,5 +1,6 @@
 package com.caiquecsx.order.gateway.h2.domain
 
+import com.caiquecsx.order.domain.Order
 import javax.persistence.*
 
 @Entity
@@ -10,4 +11,10 @@ data class OrderDatabase(
         var id: Int = 0,
         var items: String = "",
         var totalPrice: String = ""
+)
+
+fun OrderDatabase.toOrderDomain() = Order(
+        id = id,
+        items = items,
+        totalPrice = totalPrice
 )

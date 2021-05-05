@@ -1,18 +1,17 @@
 package com.caiquecsx.order.service.usecase
 
+import com.caiquecsx.order.domain.Order
 import com.caiquecsx.order.gateway.FindAllOrderGateway
-import com.caiquecsx.order.gateway.h2.domain.OrderDatabase
-import com.caiquecsx.order.gateway.h2.mapper.OrderMapper
+import com.caiquecsx.order.gateway.h2.domain.toOrderDomain
 import org.springframework.stereotype.Component
 
 @Component
 class GetAllOrdersUseCase(var findAllOrderGateway: FindAllOrderGateway) {
-    fun execute() : List<OrderDatabase>{
+    fun execute() : List<Order>{
+        val orderList = ArrayList<Order>()
         findAllOrderGateway.findAll().forEach {
-            //orderMapper.databaseToDomain(it)
-            //TODO refactor to use domain instead of database entity
-            //TODO inject mapper to use here
+            orderList.add(it.toOrderDomain())
         }
-        return findAllOrderGateway.findAll()
+        return orderList
     }
 }
