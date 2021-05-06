@@ -9,12 +9,13 @@ data class OrderDatabase(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         var id: Int = 0,
-        var items: String = "",
+        @OneToMany(cascade = [CascadeType.PERSIST])
+        var items: List<ItemDatabase> = emptyList(),
         var totalPrice: String = ""
 )
 
 fun OrderDatabase.toOrderDomain() = Order(
         id = id,
-        items = items,
+        items = items.map { it.toDomain() },
         totalPrice = totalPrice
 )
