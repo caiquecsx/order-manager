@@ -5,7 +5,7 @@ import com.caiquecsx.order.gateway.h2.domain.OrderDatabase
 import org.springframework.stereotype.Service
 
 @Service
-class FindAllOrderGatewayImpl(val orderRepository: OrderRepository): FindAllOrderGateway {
+class FindAllOrderGatewayImpl(private val orderRepository: OrderRepository): FindAllOrderGateway {
     override fun findAll(): List<OrderDatabase> {
         return orderRepository.findAll().toMutableList()
     }
