@@ -9,11 +9,13 @@ The idea of this project is to manage orders of any kind, this project is under 
 * List that orders
 
 ### TODO
-* Save a order with a list of itens
-* Alter
+* Alter orders
 * Order status
 * Dockerfile database
 * Implement logger
+* Consume orders from redis
+* Psublish update
+* Calculate order total value by itens value
 
 ### 🔨 Tecnologies
 * [Kotlin Lang](https://kotlinlang.org/)
