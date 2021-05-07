@@ -1,6 +1,8 @@
 package com.caiquecsx.order.gateway.domain
 
 import com.caiquecsx.order.domain.Order
+import com.caiquecsx.order.gateway.h2.domain.ItemDatabase
+import com.caiquecsx.order.gateway.h2.domain.toDomain
 import javax.persistence.*
 
 @Entity
