@@ -1,6 +1,6 @@
 package com.caiquecsx.order.domain
 
-import com.caiquecsx.order.gateway.h2.domain.OrderDatabase
+import com.caiquecsx.order.gateway.domain.OrderDatabase
 
 data class Order(
         var id: Int,

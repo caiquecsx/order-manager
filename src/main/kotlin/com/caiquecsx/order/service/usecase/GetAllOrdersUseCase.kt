@@ -2,7 +2,7 @@ package com.caiquecsx.order.service.usecase
 
 import com.caiquecsx.order.domain.Order
 import com.caiquecsx.order.gateway.FindAllOrderGateway
-import com.caiquecsx.order.gateway.h2.domain.toOrderDomain
+import com.caiquecsx.order.gateway.domain.toOrderDomain
 import org.springframework.stereotype.Component
 
 @Component
