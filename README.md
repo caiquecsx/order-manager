@@ -7,6 +7,7 @@ The idea of this project is to manage orders of any kind, this project is under 
 ### 📌 Features
 * Save a new order
 * List that orders
+* Get Orders by client id
 
 ### TODO
 * Alter orders
@@ -14,7 +15,7 @@ The idea of this project is to manage orders of any kind, this project is under 
 * Dockerfile database
 * Implement logger
 * Consume orders from redis
-* Psublish update
+* Publish update
 * Calculate order total value by itens value
 
 ### 🔨 Tecnologies
@@ -24,9 +25,13 @@ The idea of this project is to manage orders of any kind, this project is under 
 
 ### 💻 How to use
 
+Run with IDE or:
+
 ```sh
 $ mvn install
 $ mvn clean package
+$ docker build -t caiquecsx/order-manager .
+$ docker run -p 8080:8080 caiquecsx/order-manager
 ```
 
 ---
