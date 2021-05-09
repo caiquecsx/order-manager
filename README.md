@@ -22,6 +22,7 @@ The idea of this project is to manage orders of any kind, this project is under 
 * [Kotlin Lang](https://kotlinlang.org/)
 * [H2DB](https://www.h2database.com/html/main.html)
 * [Spock Framework](https://spockframework.org/)
+* [Swagger](https://swagger.io/)
 
 ### 💻 How to use
 
